@@ -28,7 +28,7 @@ html {
 				);
 				const data = await res.json();
 				ele.innerHTML = `
-					<h1>SLP ${data.market_data.current_price.eur}</h1>
+					<h1>SLP ${data.market_data.current_price.usd}</h1>
 				`;
 			};
 
