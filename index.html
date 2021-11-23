@@ -24,15 +24,18 @@ html {
 
 			const getValue = async () => {
 				const res = await fetch(
-					"https://www.puntoticket.com/Landing/GetEventosBusqueda"
+					"https://api.coingecko.com/api/v3/coins/smooth-love-potion"
 				);
 				const data = await res.json();
+				ele.innerHTML = `
+					<h1>SLP ${data.market_data.current_price.usd}</h1>
+				`;
 			};
 
 			getValue();
 			setInterval(() => {
 				getValue();
-			}, 3000);
+			}, 30000);
 		</script>
 	</body>
 </html>
